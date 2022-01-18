@@ -95,8 +95,7 @@ coroutine_resume(coroutine_t *co)
         assert(0);
     }
 
-
-    if (co->done) {
+    if (co->done && co->recycle) {
         coroutine_destroy(co);
     }
 

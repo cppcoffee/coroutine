@@ -18,6 +18,7 @@ main(void)
 
     co = coroutine_create(foo, "coroutine", 0);
     coroutine_resume(co);
+    coroutine_destroy(co);
 
     return 0;
 }
