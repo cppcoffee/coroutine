@@ -1,8 +1,15 @@
+CC = gcc
+CFLAGS = -g -O2 -Wall
+RM = rm -f
+
+.PHONY all clean
+
 all: main
 
 main: main.c coroutine.c
-	gcc -g -Wall -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^
 
 clean:
-	rm -f main
+	$(RM) *.o
+	$(RM) main
 

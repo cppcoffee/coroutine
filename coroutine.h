@@ -35,7 +35,6 @@ typedef struct {
     int                     stack_id;
 
     unsigned                done:1;
-    unsigned                recycle:1;
 } coroutine_t;
 
 
